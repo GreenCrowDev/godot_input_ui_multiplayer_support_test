@@ -24,6 +24,7 @@ var ijkl_dict: Dictionary = {
 }
 
 func _ready() -> void:
+	print("Max Players: %s" % Input.PLAYERS_MAX)
 	for i in start_focus_buttons.size():
 		start_focus_buttons[i].call_thread_safe("grab_focus", i)
 		pass
