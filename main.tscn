@@ -1,0 +1,268 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvtrm06iqw35w"]
+
+[ext_resource type="Script" uid="uid://byfta1yi7apbk" path="res://input_test.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("start_focus_buttons")]
+script = ExtResource("1_ig7tw")
+start_focus_buttons = [NodePath("CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer/Button"), NodePath("CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer/Button"), NodePath("CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer/Button"), NodePath("CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer/Button")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="PlayerControl1" type="VBoxContainer" parent="CanvasLayer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_player_mask = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1"]
+layout_mode = 2
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button5" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button6" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button7" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button8" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button9" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlayerControl2" type="VBoxContainer" parent="CanvasLayer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_player_mask = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2"]
+layout_mode = 2
+text = "Player 2"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button5" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button6" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button7" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button8" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button9" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlayerControl3" type="VBoxContainer" parent="CanvasLayer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_player_mask = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3"]
+layout_mode = 2
+text = "Player 3"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button5" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button6" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button7" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button8" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button9" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlayerControl4" type="VBoxContainer" parent="CanvasLayer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_player_mask = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4"]
+layout_mode = 2
+text = "Player 4"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button5" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button6" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button7" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button8" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button9" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
