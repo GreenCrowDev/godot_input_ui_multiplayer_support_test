@@ -43,8 +43,10 @@ func _unhandled_key_input(event: InputEvent):
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		return
+	elif event is InputEventJoypadMotion:
+		return
 	
-	print("Player %s Input. %s" % [event.player, event])
+	print("Device %s; Player %s; %s" % [event.device, event.player, event])
 
 func manage_multiplayer_arrow_keys(event: InputEventKey, keys_dict: Dictionary, player: int) -> void:
 	for key in keys_dict:
