@@ -35,9 +35,9 @@ func _process(delta: float) -> void:
 func _unhandled_key_input(event: InputEvent):
 	if event is InputEventKey:
 		# print("Device: %s; Player: %s;" % [event.device, event.get_player()])
-		manage_multiplayer_arrow_keys(event, wasd_dict, Input.PLAYER_2)
-		manage_multiplayer_arrow_keys(event, tfgh_dict, Input.PLAYER_3)
-		manage_multiplayer_arrow_keys(event, ijkl_dict, Input.PLAYER_4)
+		manage_multiplayer_arrow_keys(event, wasd_dict, PLAYER_ID_P2)
+		manage_multiplayer_arrow_keys(event, tfgh_dict, PLAYER_ID_P3)
+		manage_multiplayer_arrow_keys(event, ijkl_dict, PLAYER_ID_P4)
 	else:
 		print(event)
 
@@ -51,7 +51,7 @@ func _input(event: InputEvent):
 
 func manage_multiplayer_arrow_keys(event: InputEventKey, keys_dict: Dictionary, player: int) -> void:
 	for key in keys_dict:
-		if event.player != Input.PLAYER_2 && event.keycode == keys_dict[key] && event.is_pressed():
+		if event.player == PLAYER_ID_P1 && event.keycode == keys_dict[key] && event.is_pressed():
 			get_viewport().set_input_as_handled()
 			var key_event = InputEventAction.new()
 			key_event.player = player
