@@ -34,7 +34,6 @@ func _process(delta: float) -> void:
 
 func _unhandled_key_input(event: InputEvent):
 	if event is InputEventKey:
-		# print("Device: %s; Player: %s;" % [event.device, event.get_player()])
 		manage_multiplayer_arrow_keys(event, wasd_dict, PLAYER_ID_P2)
 		manage_multiplayer_arrow_keys(event, tfgh_dict, PLAYER_ID_P3)
 		manage_multiplayer_arrow_keys(event, ijkl_dict, PLAYER_ID_P4)
@@ -45,8 +44,6 @@ func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		return
 	
-	# TODO: event.player is the mask, not the number id you would expect.
-	# e.g. Input.PLAYER_3 == 4
 	print("Player %s Input. %s" % [event.player, event])
 
 func manage_multiplayer_arrow_keys(event: InputEventKey, keys_dict: Dictionary, player: int) -> void:
