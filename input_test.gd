@@ -32,25 +32,21 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _unhandled_key_input(event: InputEvent):
-	if event is InputEventKey:
-		manage_multiplayer_arrow_keys(event, wasd_dict, PLAYER_ID_P2)
-		manage_multiplayer_arrow_keys(event, tfgh_dict, PLAYER_ID_P3)
-		manage_multiplayer_arrow_keys(event, ijkl_dict, PLAYER_ID_P4)
-	else:
-		print(event)
-
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		return
 	elif event is InputEventJoypadMotion:
 		return
+	elif event is InputEventKey:
+		manage_multiplayer_arrow_keys(event, wasd_dict, PLAYER_ID_P2)
+		manage_multiplayer_arrow_keys(event, tfgh_dict, PLAYER_ID_P3)
+		manage_multiplayer_arrow_keys(event, ijkl_dict, PLAYER_ID_P4)
 	
 	print("Device %s; Player %s; %s" % [event.device, event.player, event])
 
 func manage_multiplayer_arrow_keys(event: InputEventKey, keys_dict: Dictionary, player: int) -> void:
 	for key in keys_dict:
-		if event.player == PLAYER_ID_P1 && event.keycode == keys_dict[key] && event.is_pressed():
+		if event.keycode == keys_dict[key] && event.is_pressed():
 			get_viewport().set_input_as_handled()
 			var key_event = InputEventAction.new()
 			key_event.player = player
