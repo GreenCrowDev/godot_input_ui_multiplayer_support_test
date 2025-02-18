@@ -30,7 +30,9 @@ func _ready() -> void:
 		pass
 
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("ui_select", false, Input.PLAYER_ALL):
+		for i in start_focus_buttons.size():
+			print(start_focus_buttons[i].get_focused_players_id())
 
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
