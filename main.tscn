@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" uid="uid://byfta1yi7apbk" path="res://input_test.gd" id="1_ig7tw"]
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("start_focus_buttons")]
+[node name="Main" type="Node3D"]
 script = ExtResource("1_ig7tw")
-start_focus_buttons = [NodePath("CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer/Button"), NodePath("CanvasLayer/MarginContainer/GridContainer/PlayerControl2/GridContainer/Button"), NodePath("CanvasLayer/MarginContainer/GridContainer/PlayerControl3/GridContainer/Button"), NodePath("CanvasLayer/MarginContainer/GridContainer/PlayerControl4/GridContainer/Button")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -27,7 +26,7 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-focus_player_mask = 1
+player_mask = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1"]
 layout_mode = 2
@@ -49,7 +48,7 @@ text = "1"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-focus_player_mask = 254
+player_mask = 254
 text = "No Player 1"
 
 [node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl1/GridContainer"]
@@ -98,7 +97,7 @@ text = "9"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-focus_player_mask = 2
+player_mask = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl2"]
 layout_mode = 2
@@ -159,7 +158,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-focus_player_mask = 4
+player_mask = 4
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl3"]
 layout_mode = 2
@@ -220,7 +219,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-focus_player_mask = 8
+player_mask = 8
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/GridContainer/PlayerControl4"]
 layout_mode = 2
