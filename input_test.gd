@@ -27,7 +27,7 @@ var ijkl_dict: Dictionary = {
 	"ui_down": KEY_K,
 	"ui_right": KEY_L,
 }
-	
+
 func _ready() -> void:
 	# start_focus_buttons[0].grab_focus(PLAYER_ID_P1)
 	print("Max Players: %s" % Input.PLAYERS_MAX)
@@ -35,8 +35,11 @@ func _ready() -> void:
 		start_focus_buttons[i].call_thread_safe("grab_focus", i)
 		pass
 	
-	# Map joypad 0 to player 4.
-	Input.set_joy_player_id(0, PLAYER_ID_P4)
+	if Input.is_joy_known(0):
+		# Map joypad 0 to player 4.
+		Input.set_joy_player_id(0, PLAYER_ID_P4)
+	
+	ProjectSettings.set_keyboard_mouse_player_id_override(PLAYER_ID_P2)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_select", false, PLAYER_ID_P1):
