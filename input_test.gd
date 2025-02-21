@@ -39,7 +39,9 @@ func _ready() -> void:
 		# Map joypad 0 to player 4.
 		Input.set_joy_player_id(0, PLAYER_ID_P4)
 	
-	ProjectSettings.set_keyboard_mouse_player_id_override(PLAYER_ID_P2)
+	ProjectSettings.keyboard_player_id_override = PLAYER_ID_P2
+	ProjectSettings.mouse_player_id_override = PLAYER_ID_P2
+	# ProjectSettings.touch_player_id_override = PLAYER_ID_P2
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_select", false, PLAYER_ID_P1):
